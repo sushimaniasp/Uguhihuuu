@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cardápio • Loja SP</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <!-- Topo -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" id="logo">SP</div>
+      <div class="brandText">
+        <h1 id="storeName">Sushi • Unidade SP</h1>
+        <p id="storeLine">Pedido mínimo R$ 20,00 • 30-50 min • Grátis</p>
+      </div>
+    </div>
+
+    <div class="topActions">
+      <a class="pill" id="instagram" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <button class="btn" id="btnPromo">Ver promoções</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="card hero">
+      <div class="heroHead">
+        <div>
+          <h2 id="headline">Faça seu pedido!</h2>
+          <p class="muted" id="subtitle">Sushi caprichado • entrega rápida • qualidade de sempre</p>
+
+          <div class="meta">
+            <span class="badge" id="openBadge">
+              <span class="dot"></span>
+              <b id="openText">ABERTO</b>
+              <span id="openUntil">até 02:00</span>
+            </span>
+            <span class="badge"><b id="rating">4,8</b> <span>(<span id="reviewsCount">1.007</span> avaliações)</span></span>
+            <span class="badge"><b id="distance">2,3km</b> <span>de você</span></span>
+            <span class="badge"><b id="location">São Paulo</b> <span>• Entrega grátis</span></span>
+          </div>
+        </div>
+
+        <div class="searchBox">
+          <input id="search" type="search" placeholder="Buscar produto… (ex: temaki, barca, hot)" />
+          <div class="chips" id="chips"></div>
+        </div>
+      </div>
+
+      <!-- Promo + contador -->
+      <div class="promoBar">
+        <div class="promoText">
+          <h3 id="promoTitle">Compre 1 leve 2 • Super Combo</h3>
+          <p id="promoDesc">Aproveite a promoção por tempo limitado.</p>
+        </div>
+
+        <div class="count" aria-label="contador da promoção">
+          <div class="countCol">
+            <div class="n" id="mLeft">45</div>
+            <div class="lbl">min</div>
+          </div>
+          <div class="sep">:</div>
+          <div class="countCol">
+            <div class="n" id="sLeft">00</div>
+            <div class="lbl">seg</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- Coluna esquerda -->
+      <section class="card">
+        <div class="section" id="secPromo">
+          <div class="h">
+            <h3>Promoções</h3>
+            <span class="small" id="promoHint">últimas unidades com preço especial</span>
+          </div>
+          <div class="products" id="promoList"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+          <div class="h">
+            <h3>Cardápio</h3>
+            <span class="small">selecione um item e finalize</span>
+          </div>
+          <div class="products" id="menuList"></div>
+
+          <p class="note">
+            *Escolha o item, personalize e finalize. O botão FINALIZAR abre o Finalizar.html.
+          </p>
+        </div>
+      </section>
+
+      <!-- Coluna direita -->
+      <aside class="card">
+        <div class="section">
+          <div class="h">
+            <h3>Avaliações</h3>
+            <span class="small">últimos 90 dias</span>
+          </div>
+          <div class="reviews" id="reviews"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+          <div class="h">
+            <h3>Informações</h3>
+            <span class="small">entrega & pagamento</span>
+          </div>
+
+          <div class="info">
+            <div class="row"><span>Tipos de entrega</span><b id="deliveryTypes">Motoboy • Retirada</b></div>
+            <div class="row"><span>Formas de pagamento</span><b id="payments">Pix • Cartão</b></div>
+            <div class="row"><span>Endereço</span><b id="address">Rua Exemplo, 123</b></div>
+            <div class="row"><span>Áreas de entrega</span><b id="areas">Centro • Zona Sul</b></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Barra fixa -->
+  <footer class="footerbar">
+    <div class="footerInner">
+      <div class="cta">
+        <div class="ctaLeft">
+          <div class="t">FINALIZAR PEDIDO</div>
+          <div class="s" id="ctaSub">Vai abrir outra página (HTML) — depois você conecta</div>
+        </div>
+        <button class="go" id="btnOrder">Abrir</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="selectionModal" hidden>
+    <div class="modalCard">
+      <div class="modalHead">
+        <div>
+          <h3 id="modalTitle">Selecionar item</h3>
+          <p class="small muted" id="modalDesc"></p>
+        </div>
+        <button class="ghostBtn" type="button" id="closeModal">Fechar</button>
+      </div>
+      <div class="modalBody">
+        <div class="stack">
+          <label class="small">Bebida</label>
+          <select id="modalDrink"></select>
+        </div>
+        <div class="stack" id="barcaOptions">
+          <label class="small">Itens da barca</label>
+          <div class="pillList" id="barcaList"></div>
+        </div>
+      </div>
+      <div class="modalActions">
+        <button class="ghostBtn" type="button" id="cancelModal">Cancelar</button>
+        <button class="btn2" type="button" id="confirmSelection">Finalizar pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
