@@ -34,7 +34,19 @@
 
     document.title = `Cardápio • ${c.storeName || "Loja"}`;
     $("storeName").textContent = c.storeName || "Loja";
-    $("logo").textContent = c.logoText || "🍣";
+    const logo = $("logo");
+    const logoImage = c.logoImage || "";
+    logo.textContent = "";
+    logo.classList.toggle("has-image", Boolean(logoImage));
+    if(logoImage){
+      const img = document.createElement("img");
+      img.src = logoImage;
+      img.alt = c.storeName || "Logo";
+      img.loading = "lazy";
+      logo.appendChild(img);
+    } else {
+      logo.textContent = c.logoText || "🍣";
+    }
     $("storeLine").textContent = c.line || "";
     $("headline").textContent = c.headline || "Faça seu pedido!";
     $("subtitle").textContent = c.subtitle || "";
@@ -71,9 +83,12 @@
   function productCard(prod){
     const old = prod.oldPrice ? `<div class="old">${money(prod.oldPrice)}</div>` : "";
     const tag = prod.tag ? `<span class="tag">${prod.tag}</span>` : `<span style="height:26px"></span>`;
+    const thumb = prod.image
+      ? `<img src="${prod.image}" alt="${prod.title}" loading="lazy" />`
+      : `${(prod.tag || prod.cat || "🍣").slice(0,2)}`;
     return `
       <div class="item" data-id="${prod.id}">
-        <div class="thumb">${(prod.tag || prod.cat || "🍣").slice(0,2)}</div>
+        <div class="thumb">${thumb}</div>
         <div class="itxt">
           <div class="t">${prod.title}</div>
           <p class="d">${prod.desc || ""}</p>

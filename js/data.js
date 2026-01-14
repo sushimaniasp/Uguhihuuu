@@ -3,6 +3,8 @@ window.CARDAPIO_DATA = {
   config: {
     storeName: "Sushi • Unidade SP",
     logoText: "SP",
+    // Opcional: URL da imagem da logo (ex: "./img/logo.png" ou "https://...")
+    logoImage: "",
     line: "Pedido mínimo R$ 20,00 • 30-50 min • Grátis",
     headline: "Faça seu pedido!",
     subtitle: "Sushi caprichado • entrega rápida • qualidade de sempre",
@@ -57,16 +59,16 @@ window.CARDAPIO_DATA = {
   },
 
   promoProducts: [
-    { id:"p1", cat:"Promo", title:"2 Temaki Salmão + Bebida", desc:"Combo promocional.", oldPrice:45.80, price:19.90, tag:"Pague 1 Leve 2" },
-    { id:"p2", cat:"Promo", title:"2 Temaki Hot + Bebida", desc:"Bem servido e rápido.", oldPrice:45.80, price:19.90, tag:"Promo" },
-    { id:"p3", cat:"Promo", title:"Super Barca 100 peças + Bebida", desc:"Custo-benefício (limitado).", oldPrice:149.80, price:59.90, tag:"MAIS VENDIDO" },
-    { id:"p4", cat:"Promo", title:"4 Temaki Salmão + Bebida", desc:"Pra dividir com geral.", oldPrice:85.80, price:32.90, tag:"Combo" }
+    { id:"p1", cat:"Promo", title:"2 Temaki Salmão + Bebida", desc:"Combo promocional.", oldPrice:45.80, price:19.90, tag:"Pague 1 Leve 2", image:"" },
+    { id:"p2", cat:"Promo", title:"2 Temaki Hot + Bebida", desc:"Bem servido e rápido.", oldPrice:45.80, price:19.90, tag:"Promo", image:"" },
+    { id:"p3", cat:"Promo", title:"Super Barca 100 peças + Bebida", desc:"Custo-benefício (limitado).", oldPrice:149.80, price:59.90, tag:"MAIS VENDIDO", image:"" },
+    { id:"p4", cat:"Promo", title:"4 Temaki Salmão + Bebida", desc:"Pra dividir com geral.", oldPrice:85.80, price:32.90, tag:"Combo", image:"" }
   ],
 
   menuProducts: [
-    { id:"m1", cat:"Temaki", title:"Temaki Salmão", desc:"Clássico bem recheado.", price:16.90, tag:"Clássico" },
-    { id:"m2", cat:"Temaki", title:"Temaki Hot", desc:"Crocante e bem servido.", price:17.90, tag:"Hot" },
-    { id:"m3", cat:"Barcas", title:"Barca 60 peças", desc:"Mix sushi + hot.", price:49.90, tag:"Top" },
-    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot" }
+    { id:"m1", cat:"Temaki", title:"Temaki Salmão", desc:"Clássico bem recheado.", price:16.90, tag:"Clássico", image:"" },
+    { id:"m2", cat:"Temaki", title:"Temaki Hot", desc:"Crocante e bem servido.", price:17.90, tag:"Hot", image:"" },
+    { id:"m3", cat:"Barcas", title:"Barca 60 peças", desc:"Mix sushi + hot.", price:49.90, tag:"Top", image:"" },
+    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot", image:"" }
   ]
 };
