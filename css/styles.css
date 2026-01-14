@@ -34,7 +34,7 @@ a{color:inherit}
 .brand{display:flex; align-items:center; gap:12px; min-width:0;}
 .logo{
   width:44px;height:44px;border-radius:14px;
-  background:linear-gradient(135deg, rgba(241,90,36,.95), rgba(255,159,26,.85));
+  background:var(--accent);
   display:grid; place-items:center; font-weight:900;
   border:1px solid rgba(241,90,36,.18);
   flex:0 0 auto;
@@ -51,7 +51,7 @@ a{color:inherit}
 }
 .btn{
   padding:10px 12px; border-radius:999px;
-  background:linear-gradient(135deg, rgba(241,90,36,.95), rgba(255,159,26,.9));
+  background:var(--accent);
   border:1px solid rgba(241,90,36,.18);
   font-weight:800; font-size:13px;
   color:#fff;
@@ -62,7 +62,7 @@ a{color:inherit}
 .btn2{
   width:100%;
   padding:12px 12px; border-radius:16px;
-  background:linear-gradient(135deg, rgba(241,90,36,.95), rgba(255,159,26,.85));
+  background:var(--accent);
   border:1px solid rgba(241,90,36,.2);
   font-weight:900; cursor:pointer;
   color:#fff;
@@ -176,7 +176,7 @@ a{color:inherit}
 }
 .thumb{
   width:64px; height:64px; border-radius:16px;
-  background:linear-gradient(135deg, rgba(241,90,36,.12), rgba(255,159,26,.08));
+  background:rgba(241,90,36,.12);
   border:1px solid rgba(241,90,36,.18);
   flex:0 0 auto;
   display:grid; place-items:center;
@@ -209,7 +209,7 @@ a{color:inherit}
 }
 .iconBtn:active{transform:translateY(1px)}
 .iconBtn.primary{
-  background:linear-gradient(135deg, rgba(241,90,36,.95), rgba(255,159,26,.9));
+  background:var(--accent);
   border-color: rgba(241,90,36,.25);
   color:#fff;
   box-shadow: 0 10px 20px rgba(241,90,36,.25);
@@ -259,7 +259,7 @@ a{color:inherit}
 .ctaLeft .s{color:var(--muted); font-size:12px}
 .go{
   padding:10px 12px; border-radius:14px;
-  background:linear-gradient(135deg, rgba(241,90,36,.95), rgba(255,159,26,.9));
+  background:var(--accent);
   border:1px solid rgba(241,90,36,.2);
   font-weight:950; cursor:pointer;
   color:#fff;

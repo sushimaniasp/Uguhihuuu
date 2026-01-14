@@ -59,8 +59,8 @@
       $("openText").textContent = "FECHADO";
       $("openUntil").textContent = "";
     } else {
-      $("openText").textContent = "ABERTO";
-      $("openUntil").textContent = " " + (c.open?.until || "");
+      $("openText").textContent = c.open?.message || "Aberto";
+      $("openUntil").textContent = c.open?.message ? "" : " " + (c.open?.until || "");
     }
 
     // chips categorias
@@ -158,7 +158,7 @@
 
     const barcaBox = $("barcaOptions");
     const barcaList = $("barcaList");
-    const isBarca = prod.cat === "Barcas";
+    const isBarca = prod.cat === "Barcas" || /barca/i.test(prod.title);
     if(isBarca){
       barcaBox.hidden = false;
       barcaList.innerHTML = barcaItems.map(item => `
