@@ -11,7 +11,7 @@ window.CARDAPIO_DATA = {
     distance: "2,3km",
     rating: "4,8",
     reviewsCount: "1.007",
-    open: { isOpen: true, until: "até 02:00" },
+    open: { isOpen: true, message: "Fecharemos em 20 minutos. Faça seu pedido rápido!" },
 
     promo: {
       title: "Compre 1 leve 2 • Super Combo",
@@ -27,8 +27,26 @@ window.CARDAPIO_DATA = {
     },
 
     categories: ["Promo", "Temaki", "Barcas", "Hot", "Bebidas"],
-    drinks: ["Coca-Cola", "Guaraná", "Sprite", "Água sem gás"],
-    barcaItems: ["Sashimi", "Niguiri", "Uramaki", "Hot roll", "Hossomaki"],
+    drinks: [
+      "Coca Cola - Lata",
+      "Coca Cola Zero - Lata",
+      "Guaraná - Lata",
+      "Sprite - Lata",
+      "Suco Uva - Lata",
+      "Suco Laranja - Lata",
+      "Água sem Gás",
+      "Água com Gás"
+    ],
+    barcaItems: [
+      "20 Hot Philadelphia",
+      "20 Sashimi Salmão",
+      "20 Niguiri Skin",
+      "20 Uramaki de Shimeji",
+      "20 Uramaki de Salmão Cream Cheese",
+      "20 Niguiris de Salmão",
+      "20 Hossomaki Salmão Grelhado",
+      "20 Hossomaki Salmão"
+    ],
 
     reviews: [
       { name: "Cinthia", stars: 5, text: "Chegou perfeito, bem embalado e tudo fresquinho." },
