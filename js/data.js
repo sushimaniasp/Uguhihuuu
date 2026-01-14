@@ -1,13 +1,13 @@
 // Edite aqui: produtos, categorias, tags, preços, etc.
 window.CARDAPIO_DATA = {
   config: {
-    storeName: "Sushi • Unidade SP",
-    logoText: "SP",
+    storeName: "Sushi Mania",
+    logoText: "PA",
     // Opcional: URL da imagem da logo (ex: "./img/logo.png" ou "https://...")
-    logoImage: "",
+    logoImage: "japalogo.jpg",
     line: "Pedido mínimo R$ 20,00 • 30-50 min • Grátis",
     headline: "Faça seu pedido!",
-    subtitle: "Sushi caprichado • entrega rápida • qualidade de sempre",
+    subtitle: "",
     instagramUrl: "https://instagram.com/",
     location: "São Paulo",
     distance: "2,3km",
@@ -23,9 +23,9 @@ window.CARDAPIO_DATA = {
 
     info: {
       deliveryTypes: "Motoboy • Retirada",
-      payments: "Pix • Cartão",
-      address: "Rua Exemplo, 123 • SP",
-      areas: "Centro • Zona Sul • Zona Oeste"
+      payments: "Pix",
+      address: "São Paulo - SP",
+      areas: "Centro • Zona Sul, Norte, Leste, Oeste."
     },
 
     categories: ["Promo", "Temaki", "Barcas", "Hot", "Bebidas"],
