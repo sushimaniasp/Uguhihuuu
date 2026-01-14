@@ -92,7 +92,6 @@
         <div class="itxt">
           <div class="t">${prod.title}</div>
           <p class="d">${prod.desc || ""}</p>
-          <p class="d"><b>Categoria:</b> ${prod.cat || "-"}</p>
         </div>
         <div class="price">
           ${tag}
