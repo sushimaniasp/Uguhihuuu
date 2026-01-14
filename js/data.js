@@ -67,7 +67,6 @@ window.CARDAPIO_DATA = {
     { id:"m1", cat:"Temaki", title:"Temaki Salmão", desc:"Clássico bem recheado.", price:16.90, tag:"Clássico" },
     { id:"m2", cat:"Temaki", title:"Temaki Hot", desc:"Crocante e bem servido.", price:17.90, tag:"Hot" },
     { id:"m3", cat:"Barcas", title:"Barca 60 peças", desc:"Mix sushi + hot.", price:49.90, tag:"Top" },
-    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot" },
-    { id:"m5", cat:"Bebidas", title:"Refrigerante 350ml", desc:"Geladinho.", price:6.00, tag:"Bebida" }
+    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot" }
   ]
 };
