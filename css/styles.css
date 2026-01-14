@@ -204,7 +204,6 @@ a{color:inherit}
 }
 .itxt{
   min-width:0;
-  flex:1;
 }
 .itxt .t{font-weight:900; font-size:14px; margin:0 0 6px}
 .itxt .d{margin:0; color:var(--muted); font-size:12px; line-height:1.35}
