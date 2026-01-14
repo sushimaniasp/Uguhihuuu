@@ -39,6 +39,17 @@ a{color:inherit}
   border:1px solid rgba(241,90,36,.18);
   flex:0 0 auto;
 }
+.logo.has-image{
+  background:#fff;
+  padding:3px;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
 .brandText{min-width:0}
 .brandText h1{font-size:16px;margin:0;line-height:1.1}
 .brandText p{margin:3px 0 0;color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
@@ -182,6 +193,13 @@ a{color:inherit}
   display:grid; place-items:center;
   color:rgba(241,90,36,.8);
   font-weight:900;
+}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
 }
 .itxt{min-width:0; flex:1}
 .itxt .t{font-weight:900; font-size:14px; margin:0 0 4px}
