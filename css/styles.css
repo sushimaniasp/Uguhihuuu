@@ -8,8 +8,8 @@
   --danger:#e53935;
   --border:rgba(15,23,42,.08);
   --shadow:0 12px 32px rgba(15,23,42,.08);
-  --radius:18px;
-  --radius2:24px;
+  --radius:10px;
+  --radius2:12px;
   --max:980px;
   --input: #ffffff;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -33,7 +33,7 @@ a{color:inherit}
 }
 .brand{display:flex; align-items:center; gap:12px; min-width:0;}
 .logo{
-  width:44px;height:44px;border-radius:14px;
+  width:44px;height:44px;border-radius:10px;
   background:var(--accent);
   display:grid; place-items:center; font-weight:900;
   border:1px solid rgba(241,90,36,.18);
@@ -44,24 +44,24 @@ a{color:inherit}
 .brandText p{margin:3px 0 0;color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .topActions{display:flex; gap:10px; align-items:center; flex:0 0 auto;}
 .pill{
-  padding:8px 10px; border-radius:999px;
+  padding:8px 10px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--muted); font-size:12px; text-decoration:none;
 }
 .btn{
-  padding:10px 12px; border-radius:999px;
+  padding:10px 12px; border-radius:10px;
   background:var(--accent);
   border:1px solid rgba(241,90,36,.18);
   font-weight:800; font-size:13px;
   color:#fff;
-  box-shadow: 0 10px 24px rgba(241,90,36,.2);
+  box-shadow:none;
   cursor:pointer;
 }
 .btn:active{transform:translateY(1px)}
 .btn2{
   width:100%;
-  padding:12px 12px; border-radius:16px;
+  padding:12px 12px; border-radius:10px;
   background:var(--accent);
   border:1px solid rgba(241,90,36,.2);
   font-weight:900; cursor:pointer;
@@ -94,7 +94,7 @@ a{color:inherit}
 .meta b{color:var(--text)}
 .badge{
   display:inline-flex; align-items:center; gap:8px;
-  padding:8px 10px; border-radius:999px;
+  padding:8px 10px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
 }
@@ -107,7 +107,7 @@ a{color:inherit}
 .searchBox input{
   width:100%;
   padding:12px 12px;
-  border-radius:16px;
+  border-radius:10px;
   border:1px solid var(--border);
   background:var(--input);
   color:var(--text);
@@ -116,7 +116,7 @@ a{color:inherit}
 .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
 .chip{
   padding:8px 10px;
-  border-radius:999px;
+  border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--muted);
@@ -142,7 +142,7 @@ a{color:inherit}
 .promoText p{margin:0;color:var(--muted); font-size:13px}
 .count{
   display:flex; gap:8px; align-items:center;
-  padding:10px 12px; border-radius:16px;
+  padding:10px 12px; border-radius:10px;
   border:1px solid rgba(241,90,36,.2);
   background:#fff;
   min-width:180px; justify-content:center;
@@ -170,12 +170,12 @@ a{color:inherit}
 .products{display:grid; grid-template-columns:1fr; gap:10px}
 .item{
   display:flex; gap:12px; align-items:stretch;
-  padding:12px; border-radius:18px;
+  padding:12px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
 }
 .thumb{
-  width:64px; height:64px; border-radius:16px;
+  width:64px; height:64px; border-radius:10px;
   background:rgba(241,90,36,.12);
   border:1px solid rgba(241,90,36,.18);
   flex:0 0 auto;
@@ -192,7 +192,7 @@ a{color:inherit}
 .new{font-weight:950}
 .tag{
   font-size:11px; font-weight:900;
-  padding:6px 8px; border-radius:999px;
+  padding:6px 8px; border-radius:10px;
   border:1px solid rgba(241,90,36,.35);
   background:rgba(241,90,36,.12);
   color:#9c2f0e;
@@ -200,7 +200,7 @@ a{color:inherit}
 }
 .itemActions{display:flex; gap:8px; align-items:center}
 .iconBtn{
-  padding:8px 10px; border-radius:14px;
+  padding:8px 10px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--text);
@@ -212,12 +212,12 @@ a{color:inherit}
   background:var(--accent);
   border-color: rgba(241,90,36,.25);
   color:#fff;
-  box-shadow: 0 10px 20px rgba(241,90,36,.25);
+  box-shadow:none;
 }
 
 .reviews{display:grid; gap:10px}
 .rev{
-  padding:12px; border-radius:18px;
+  padding:12px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
 }
@@ -229,7 +229,7 @@ a{color:inherit}
 .info{display:grid; gap:10px}
 .row{
   display:flex; justify-content:space-between; align-items:center; gap:12px;
-  padding:12px; border-radius:18px;
+  padding:12px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--muted);
@@ -250,7 +250,7 @@ a{color:inherit}
 .cta{
   flex:1;
   display:flex; gap:10px; align-items:center; justify-content:space-between;
-  padding:12px 14px; border-radius:18px;
+  padding:12px 14px; border-radius:10px;
   border:1px solid rgba(241,90,36,.2);
   background:rgba(241,90,36,.06);
 }
@@ -258,7 +258,7 @@ a{color:inherit}
 .ctaLeft .t{font-weight:950}
 .ctaLeft .s{color:var(--muted); font-size:12px}
 .go{
-  padding:10px 12px; border-radius:14px;
+  padding:10px 12px; border-radius:10px;
   background:var(--accent);
   border:1px solid rgba(241,90,36,.2);
   font-weight:950; cursor:pointer;
@@ -267,7 +267,7 @@ a{color:inherit}
 .go:active{transform:translateY(1px)}
 
 .empty{
-  padding:12px; border-radius:18px;
+  padding:12px; border-radius:10px;
   border:1px dashed rgba(241,90,36,.2);
   color:var(--muted);
 }
@@ -276,13 +276,13 @@ a{color:inherit}
 .form label{display:grid; gap:6px; color:var(--muted); font-size:13px}
 .form input,.form textarea,.form select{
   padding:12px 12px;
-  border-radius:16px;
+  border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--text);
   outline:none;
 }
-.totalsLine{display:flex; justify-content:space-between; align-items:center; padding:12px; border-radius:18px; border:1px solid var(--border); background:#fff}
+.totalsLine{display:flex; justify-content:space-between; align-items:center; padding:12px; border-radius:10px; border:1px solid var(--border); background:#fff}
 
 .modal{
   position:fixed; inset:0; background:rgba(31,35,40,.45);
@@ -310,7 +310,7 @@ a{color:inherit}
 .modalActions{display:flex; gap:10px; padding:16px; border-top:1px solid var(--border)}
 .ghostBtn{
   flex:1; padding:12px;
-  border-radius:14px;
+  border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--text);
@@ -321,10 +321,19 @@ a{color:inherit}
 .pillList{display:flex; flex-wrap:wrap; gap:8px}
 .pillOption{
   padding:8px 10px;
-  border-radius:999px;
+  border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
   color:var(--muted);
   font-size:12px;
 }
 .pillOption input{margin-right:6px}
+
+.modalBody select{
+  padding:12px 12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--text);
+  outline:none;
+}

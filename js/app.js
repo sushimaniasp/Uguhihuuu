@@ -140,6 +140,25 @@
   }
 
   // ===== Modal de seleção =====
+  function getBarcaMaxSelections(prod){
+    const title = prod.title || "";
+    const match = title.match(/(\d+)\s*peças?/i);
+    if(!match) return null;
+    const totalPieces = Number(match[1]);
+    if(!Number.isFinite(totalPieces) || totalPieces <= 0) return null;
+    return Math.floor(totalPieces / 20);
+  }
+
+  function updateBarcaSelectionState(){
+    const barcaList = $("barcaList");
+    const maxSelections = Number(barcaList?.dataset.maxSelections || 0);
+    if(!barcaList || !maxSelections) return;
+    const checked = barcaList.querySelectorAll("input:checked").length;
+    barcaList.querySelectorAll("input:not(:checked)").forEach(input => {
+      input.disabled = checked >= maxSelections;
+    });
+  }
+
   function openSelectionModal(prod){
     const modal = $("selectionModal");
     if(!modal) return;
@@ -159,15 +178,24 @@
     const barcaBox = $("barcaOptions");
     const barcaList = $("barcaList");
     const isBarca = prod.cat === "Barcas" || /barca/i.test(prod.title);
-    if(isBarca){
+    const maxSelections = isBarca ? getBarcaMaxSelections(prod) : null;
+    modal.dataset.isBarca = String(Boolean(isBarca && maxSelections));
+    modal.dataset.maxBarcaSelections = maxSelections ? String(maxSelections) : "";
+    if(isBarca && maxSelections){
       barcaBox.hidden = false;
+      barcaList.dataset.maxSelections = String(maxSelections);
       barcaList.innerHTML = barcaItems.map(item => `
         <label class="pillOption">
           <input type="checkbox" value="${item}" />${item}
         </label>
       `).join("");
+      barcaList.querySelectorAll("input").forEach(input => {
+        input.addEventListener("change", updateBarcaSelectionState);
+      });
+      updateBarcaSelectionState();
     } else {
       barcaBox.hidden = true;
+      barcaList.dataset.maxSelections = "";
       barcaList.innerHTML = "";
     }
   }
@@ -193,6 +221,13 @@
       const drink = $("modalDrink")?.value || "Sem bebida";
       const barcaItems = Array.from($("barcaList")?.querySelectorAll("input:checked") || [])
         .map(input => input.value);
+
+      const mustSelectBarca = modal.dataset.isBarca === "true";
+      const maxBarcaSelections = Number(modal.dataset.maxBarcaSelections || 0);
+      if(mustSelectBarca && maxBarcaSelections && barcaItems.length !== maxBarcaSelections){
+        alert(`Selecione ${maxBarcaSelections} itens da barca.`);
+        return;
+      }
 
       setSelection({ productId, drink, barcaItems });
       location.href = "./Finalizar.html";
