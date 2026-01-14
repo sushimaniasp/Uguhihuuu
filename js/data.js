@@ -61,7 +61,7 @@ window.CARDAPIO_DATA = {
   promoProducts: [
     { id:"p1", cat:"Promo", title:"2 Temaki Salmão + Bebida", desc:"Combo promocional.", oldPrice:45.80, price:19.90, tag:"Pague 1 Leve 2", image:"" },
     { id:"p2", cat:"Promo", title:"2 Temaki Hot + Bebida", desc:"Bem servido e rápido.", oldPrice:45.80, price:19.90, tag:"Promo", image:"" },
-    { id:"p3", cat:"Promo", title:"Super Barca 100 peças + Bebida", desc:"Custo-benefício (limitado).", oldPrice:149.80, price:59.90, tag:"MAIS VENDIDO", image:"" },
+    { id:"p3", cat:"Promo", title:"Super Barca 100 peças + Bebida", desc:"Custo-benefício (limitado).", oldPrice:149.80, price:59.90, tag:"MAIS VENDIDO", image:"barcasushi1.png" },
     { id:"p4", cat:"Promo", title:"4 Temaki Salmão + Bebida", desc:"Pra dividir com geral.", oldPrice:85.80, price:32.90, tag:"Combo", image:"" }
   ],
 
