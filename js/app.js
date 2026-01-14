@@ -220,9 +220,7 @@
 
   // ===== Events =====
   function bindEvents(){
-    if(!$("btnOrder")) return;
-
-    $("btnOrder").addEventListener("click", ()=> location.href = "./Finalizar.html");
+    $("btnOrder")?.addEventListener("click", ()=> location.href = "./Finalizar.html");
     $("btnPromo")?.addEventListener("click", ()=> $("secPromo")?.scrollIntoView({behavior:"smooth"}));
 
     // busca
