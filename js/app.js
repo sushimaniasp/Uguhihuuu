@@ -4,6 +4,8 @@
   // ===== Helpers =====
   const $ = (id) => document.getElementById(id);
   const money = (v) => "R$ " + Number(v || 0).toFixed(2).replace(".", ",");
+  const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+  let imageObserver = null;
 
   // ===== Selection (localStorage) =====
   const SELECTION_KEY = "cardapio_selection_v1";
@@ -42,7 +44,9 @@
       const img = document.createElement("img");
       img.src = logoImage;
       img.alt = c.storeName || "Logo";
-      img.loading = "lazy";
+      img.loading = "eager";
+      img.decoding = "async";
+      img.fetchPriority = "high";
       logo.appendChild(img);
     } else {
       logo.textContent = c.logoText || "🍣";
@@ -84,7 +88,7 @@
     const old = prod.oldPrice ? `<div class="old">${money(prod.oldPrice)}</div>` : "";
     const tag = prod.tag ? `<span class="tag">${prod.tag}</span>` : `<span style="height:26px"></span>`;
     const thumb = prod.image
-      ? `<img src="${prod.image}" alt="${prod.title}" loading="lazy" />`
+      ? `<img src="${TRANSPARENT_PIXEL}" data-src="${prod.image}" alt="${prod.title}" loading="lazy" decoding="async" width="110" height="110" />`
       : `${(prod.tag || prod.cat || "🍣").slice(0,2)}`;
     return `
       <div class="item" data-id="${prod.id}">
@@ -107,6 +111,36 @@
     `;
   }
 
+  function setupLazyImages(){
+    const images = document.querySelectorAll("img[data-src]");
+    if(!images.length) return;
+
+    if(!("IntersectionObserver" in window)){
+      images.forEach(img => {
+        img.src = img.dataset.src || img.src;
+        img.removeAttribute("data-src");
+      });
+      return;
+    }
+
+    if(!imageObserver){
+      imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(!entry.isIntersecting) return;
+          const img = entry.target;
+          const src = img.dataset.src;
+          if(src){
+            img.src = src;
+            img.removeAttribute("data-src");
+          }
+          observer.unobserve(img);
+        });
+      }, { rootMargin: "200px 0px" });
+    }
+
+    images.forEach(img => imageObserver.observe(img));
+  }
+
   function renderLists(filterText = "", filterCat = ""){
     if(!$("promoList")) return;
 
@@ -122,6 +156,8 @@
     $("menuList").innerHTML = menu
       .filter(p => matches(p, text, filterCat))
       .map(productCard).join("") || `<div class="empty">Nada encontrado no cardápio.</div>`;
+
+    setupLazyImages();
 
     // bind select buttons
     document.querySelectorAll("[data-select]").forEach(btn=>{
