@@ -87,12 +87,13 @@
   function productCard(prod){
     const old = prod.oldPrice ? `<div class="old">${money(prod.oldPrice)}</div>` : "";
     const tag = prod.tag ? `<span class="tag">${prod.tag}</span>` : `<span style="height:26px"></span>`;
-    const thumb = prod.image
-      ? `<img src="${TRANSPARENT_PIXEL}" data-src="${prod.image}" alt="${prod.title}" loading="lazy" decoding="async" width="110" height="110" />`
-      : `${(prod.tag || prod.cat || "🍣").slice(0,2)}`;
+    const image = (prod.image || "").trim();
+    const thumb = image
+      ? `<div class="thumb is-image"><img src="${TRANSPARENT_PIXEL}" data-src="${image}" alt="${prod.title}" loading="lazy" decoding="async" width="110" height="110" /></div>`
+      : `<div class="thumb"><span class="thumbText">${(prod.tag || prod.cat || "🍣").slice(0,2)}</span></div>`;
     return `
       <div class="item" data-id="${prod.id}">
-        <div class="thumb">${thumb}</div>
+        ${thumb}
         <div class="itxt">
           <div class="t">${prod.title}</div>
           <p class="d">${prod.desc || ""}</p>
