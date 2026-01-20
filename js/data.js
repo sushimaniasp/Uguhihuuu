@@ -51,10 +51,10 @@ window.CARDAPIO_DATA = {
     ],
 
     reviews: [
-      { name: "Cinthia", stars: 5, text: "Chegou perfeito, bem embalado e tudo fresquinho." },
-      { name: "Lucas", stars: 5, text: "Melhor custo-benefício. Entrega rápida." },
-      { name: "Luiza", stars: 5, text: "Viciei kkk, tudo muito bem feito." },
-      { name: "Ronald", stars: 5, text: "Bem servido e qualidade absurda." }
+      { name: "Cinthia", stars: 5, text: "Chegou perfeito, bem embalado e tudo fresquinho.", image: "temaki2.png" },
+      { name: "Lucas", stars: 5, text: "Melhor custo-benefício. Entrega rápida.", image: "barcasushi1.png" },
+      { name: "Luiza", stars: 5, text: "Viciei kkk, tudo muito bem feito.", image: "temakihot.png" },
+      { name: "Ronald", stars: 5, text: "Bem servido e qualidade absurda.", image: "combinado4.png" }
     ]
   },
 
