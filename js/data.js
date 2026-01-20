@@ -12,8 +12,8 @@ window.CARDAPIO_DATA = {
     location: "São Paulo",
     distance: "2,3km",
     rating: "4,8",
-    reviewsCount: "1.007",
-    open: { isOpen: true, message: "Fecharemos em 20 minutos. Faça seu pedido rápido!" },
+    reviewsCount: "148",
+    open: { isOpen: true, message: "Aberto" },
 
     promo: {
       title: "Compre 1 leve 2 • Super Combo",
@@ -68,7 +68,7 @@ window.CARDAPIO_DATA = {
   menuProducts: [
     { id:"m1", cat:"Temaki", title:"Temaki Salmão", desc:"Clássico bem recheado.", price:16.90, tag:"Clássico", image:"" },
     { id:"m2", cat:"Temaki", title:"Temaki Hot", desc:"Crocante e bem servido.", price:17.90, tag:"Hot", image:"hotunico.png" },
-    { id:"m3", cat:"Barcas", title:"Barca 60 peças", desc:"Mix sushi + hot.", price:49.90, tag:"Top", image:"barcasushi1.png" },
-    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot", image:"" }
+    { id:"m3", cat:"Barcas", title:"Barca 60 peças", desc:"Mix sushi + hot.", price:49.90, tag:"Top", image:"combinado4.png" },
+    { id:"m4", cat:"Hot", title:"Combo Hot 30 peças", desc:"Bem recheado.", price:34.90, tag:"Hot", image:"combinado3.png" }
   ]
 };
