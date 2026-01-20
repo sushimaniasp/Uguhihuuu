@@ -219,6 +219,30 @@ a{color:inherit}
   color:#9c2f0e;
   white-space:nowrap;
 }
+
+@media (max-width: 860px){
+  .item{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+  }
+  .thumb{
+    width:100%;
+    height:180px;
+    overflow:hidden;
+  }
+  .itxt{
+    width:100%;
+  }
+  .price{
+    width:100%;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    row-gap:8px;
+  }
+}
 .itemActions{display:flex; gap:8px; align-items:center}
 .iconBtn{
   padding:8px 10px; border-radius:10px;
