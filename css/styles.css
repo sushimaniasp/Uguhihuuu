@@ -223,11 +223,14 @@ a{color:inherit}
 @media (max-width: 640px){
   .item{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:stretch;
   }
   .thumb{
     width:100%;
     height:180px;
+  }
+  .itxt{
+    width:100%;
   }
   .price{
     width:100%;
