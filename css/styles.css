@@ -219,6 +219,23 @@ a{color:inherit}
   color:#9c2f0e;
   white-space:nowrap;
 }
+
+@media (max-width: 640px){
+  .item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .thumb{
+    width:100%;
+    height:180px;
+  }
+  .price{
+    width:100%;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+}
 .itemActions{display:flex; gap:8px; align-items:center}
 .iconBtn{
   padding:8px 10px; border-radius:10px;
