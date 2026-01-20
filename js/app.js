@@ -179,14 +179,18 @@
     if(!$("reviews")) return;
     const list = (DATA.config?.reviews || []).map(r => `
       <div class="rev">
-        <div class="revTop">
-          <div class="name">${r.name}</div>
-          <div class="stars">${"★".repeat(r.stars)}${"☆".repeat(5-r.stars)}</div>
+        ${r.image ? `<div class="revImage"><img src="${TRANSPARENT_PIXEL}" data-src="${r.image}" alt="Avaliação de ${r.name}" loading="lazy" decoding="async" width="64" height="64" /></div>` : ""}
+        <div class="revContent">
+          <div class="revTop">
+            <div class="name">${r.name}</div>
+            <div class="stars">${"★".repeat(r.stars)}${"☆".repeat(5-r.stars)}</div>
+          </div>
+          <p>${r.text}</p>
         </div>
-        <p>${r.text}</p>
       </div>
     `).join("");
     $("reviews").innerHTML = list || `<div class="empty">Sem avaliações por enquanto.</div>`;
+    setupLazyImages();
   }
 
   // ===== Modal de seleção =====

@@ -241,6 +241,28 @@ a{color:inherit}
   padding:12px; border-radius:10px;
   border:1px solid var(--border);
   background:#fff;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.revImage{
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  border:1px solid rgba(241,90,36,.2);
+  background:rgba(241,90,36,.08);
+  flex:0 0 auto;
+  overflow:hidden;
+}
+.revImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.revContent{
+  flex:1;
+  min-width:0;
 }
 .revTop{display:flex; justify-content:space-between; gap:10px; align-items:center}
 .rev .name{font-weight:900}
