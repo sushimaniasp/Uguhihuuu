@@ -110,13 +110,14 @@
         const barcaLine = selection.barcaItems?.length
           ? `<p class="d"><b>Itens da barca:</b> ${selection.barcaItems.join(", ")}</p>`
           : "";
-        const thumb = product.image
-          ? `<img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async" width="110" height="110" />`
-          : `${(product.tag || "🍣").slice(0,2)}`;
+        const image = (product.image || "").trim();
+        const thumb = image
+          ? `<div class="thumb is-image"><img src="${image}" alt="${product.title}" loading="lazy" decoding="async" width="110" height="110" /></div>`
+          : `<div class="thumb"><span class="thumbText">${(product.tag || "🍣").slice(0,2)}</span></div>`;
 
         sumItems.innerHTML = `
           <div class="item">
-            <div class="thumb">${thumb}</div>
+            ${thumb}
             <div class="itxt">
               <div class="t">${product.title}</div>
               <p class="d">${product.desc || ""}</p>
